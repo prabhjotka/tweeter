@@ -1,0 +1,16 @@
+nav {
+    height: 120px;
+    width: 100vw;
+    background-color: #4056A1;
+    color: #FFFFFF;
+    font-family: Bungee; 
+    padding-left: 1.5em; 
+    padding-right: 1.5em; 
+    position: fixed;
+  }
+  .icon {
+    position: relative;
+    /* Adjust these values accordingly */
+    top: 20px;
+    left: -100px;
+  }
