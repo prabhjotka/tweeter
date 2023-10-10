@@ -1,0 +1,50 @@
+.new-tweet{
+display:flex;
+flex-direction: column;
+
+}
+.formcss{
+    display:flex;
+    flex-direction:column;
+    justify-content: center
+   
+}
+
+.textareacss{
+    display:flex;
+    justify-content:center;
+    background-color: #e9b768;
+    border:none;
+    /* //overflow:hidden; */
+   
+}
+.borderbottom{
+ 
+    border-bottom: double;
+  
+}
+.divcss{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+.buttoncss{
+    display:flex;
+    justify-content:left;
+    background-color: blue;
+    border-width: 5px;
+    border-color: blueviolet;
+    color: aliceblue;
+
+
+}
+
+.outputcss{
+    display:flex;
+    justify-content:right;
+    text-align: right;
+    color:blue;
+    margin-left: 80px;
+}
