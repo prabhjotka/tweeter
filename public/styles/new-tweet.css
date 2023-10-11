@@ -1,3 +1,8 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .new-tweet{
 display:flex;
 flex-direction: column;
@@ -10,19 +15,32 @@ flex-direction: column;
    
 }
 
+.textarea1{
+   
+    width: 120%;
+    height: 80px;
+  padding: 12px 20px;
+ margin-right: 350px;
+ text-align: left;
+
+}
 .textareacss{
     display:flex;
-    justify-content:center;
     background-color: #e9b768;
     border:none;
-    /* //overflow:hidden; */
+    font-size: medium;
+    justify-content: center;
+    border-bottom: 1px solid;
    
 }
-.borderbottom{
- 
-    border-bottom: double;
-  
+.textarea2{
+    margin-top: 60px;
+    display:flex;
+   height:50px
+    
 }
+
+
 .divcss{
     display:flex;
     flex-direction:row;
@@ -40,11 +58,86 @@ flex-direction: column;
 
 
 }
-
+h2{
+    font-size:large;
+    text-align: center;
+    color:aquamarine;
+    margin-left: 80px;
+   
+}
 .outputcss{
     display:flex;
-    justify-content:right;
+    justify-content: flex-end;
     text-align: right;
     color:blue;
-    margin-left: 80px;
+    margin-right:-100px;
 }
+article {
+    display: flex;
+    box-sizing: border-box;
+    width: 60%;
+    border: solid #aeb8ee 3px;
+    margin-left: 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+
+}
+article:hover{
+    box-shadow: 10px 5px 5px rgb(83, 99, 252);
+}
+
+.tweet-header{
+    display: flex;
+   flex-flow: row;
+   font-size: medium;
+    color: blue;
+
+}
+.header-p{
+    margin-left: 15px;
+    margin-top: 1px;
+
+}
+.header-p2{
+    margin-left: 450px;
+    margin-top: 1px;
+    color:#aeb8ee;
+
+}
+.tweet-footer{
+    display: flex;
+   
+    flex-direction: row;
+    font-size: medium;
+    justify-content: space-between;
+    resize: none;
+    
+    
+}
+
+.footer-text{
+display: flex;
+color:#7c8ad8;
+justify-content: left;
+margin-top: 20px;
+
+}
+
+.div-icon{
+    margin-top: 20px;
+    margin-right:2em;
+}
+
+.fa-heart,
+.fa-flag,
+.fa-arrows-rotate {
+margin-right:5px;
+margin-top: 30px;
+}
+
+
+.hovercss:hover {
+   color: yellow;
+
+  }

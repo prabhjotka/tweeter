@@ -1,30 +1,33 @@
 .header{
-    height: 450px;
+    height: 430px;
     width: 100%;
     display:flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;   
     background-color: #c7c290;
-   
-  
-    
+    background-image: url("../images/3px-tile.png");
 
+   
 }
+
 
 .avatar{
     display:flex;
     align-items: center;
     justify-content: center;
-    width: 100px; 
-    height: 100px;
+    width: 60px; 
+    height: 60px;
     border-radius: 50%;
     margin-top: 250px;
+
   
 }
 .name{
     display:flex;
-    margin-top: 20px;
+    margin-top: 60px;
     flex-direction:column;
+    font-size:medium;
+    color: rgb(86, 223, 223);
    
 }

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="/styles/nav.css"  type="text/css" />
     <link rel="stylesheet" href="/styles/header.css"  type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -28,8 +29,8 @@
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span style=" margin-top: 50px;">tweeter</span>
-      <h5 style="text-align:right;">Write a New Tweet <i style="color: red;" class="fa-solid fa-angles-down icon"></i></h5>
+      <span>tweeter</span>
+      <h5>Write  a new tweet <i style="color: red;" class="fa-solid fa-angles-down icon"></i></h5>
       
     </nav>
     <header class="header">
@@ -38,7 +39,7 @@
       </div>
       <br>
       <div class="name">
-          <h2>Prab</h2>
+          <h3>Prab</h3>
       </div>
   </header>
     <!-- Page-specific (main) content here -->
@@ -47,7 +48,7 @@
         <h2>Compose Tweet</h2>
         <form method="post" action='/tweets'  class="formcss">
           <!--<label for="tweet-text">What are you humming about?</label>-->
-          <textarea name="text" id="tweet-text" class="textareacss"
+          <textarea name="text" id="tweet-text" class="textareacss textarea1"
            placeholder="What are you humming about?"></textarea>
           <div class="borderbottom"></div>
           <div class="divcss">
@@ -56,6 +57,25 @@
           </div>
         </form>
       </section>
+      <article>
+
+        <header class="tweet-header">
+          <i class="fa-solid fa-comments"></i><p class="header-p">Newton</p>
+          <p class="header-p2">@Sirlsaac</p>
+        </header>
+        <textarea name="text2" id="article-text" class="textareacss textarea2" placeholder="if I have seen further it is by standing on shoulders of gaints"></textarea>
+        <footer class="tweet-footer">
+          <p class="footer-text">10 days ago</p>
+        <div class="div-icon">
+          <i class="fa-solid fa-heart hovercss"></i>
+          <i class="fa-solid fa-flag hovercss"></i>
+          <i class="fa-solid fa-arrows-rotate hovercss"></i>
+
+        </div>
+          
+        </footer>
+      </article>
+
     </main>
 
    
