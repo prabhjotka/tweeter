@@ -6,10 +6,12 @@ $(document).ready(function() {
         const txtlength = this.value.length;
 
         $("output").text(function(n) {
-            const Txtareavalue = ouputText - txtlength;
-            if (txtlength > ouputText) {
+            const Txtareavalue = 140 - txtlength;
+            if (txtlength > 140) {
 
                 $("output").css("color", "red");
+                //$("output").text("-", Txtareavalue);
+                return -Math.abs(Txtareavalue);
             }
 
 
