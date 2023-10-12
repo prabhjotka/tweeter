@@ -16,7 +16,7 @@ flex-direction: column;
 }
 
 .textarea1{
-   
+   margin-top:40px;
     width: 120%;
     height: 80px;
   padding: 12px 20px;
@@ -34,9 +34,9 @@ flex-direction: column;
    
 }
 .textarea2{
-    margin-top: 60px;
+    margin-top: 80px;
     display:flex;
-   height:50px
+   height:40px
     
 }
 
@@ -75,12 +75,14 @@ h2{
 article {
     display: flex;
     box-sizing: border-box;
-    width: 60%;
+    width: 70%;
     border: solid #aeb8ee 3px;
     margin-left: 100px;
     margin-top: 20px;
     margin-bottom: 20px;
     flex-direction: column;
+    padding-left: 10px;
+    padding-top: 10px;
 
 }
 article:hover{
@@ -95,15 +97,20 @@ article:hover{
 
 }
 .header-p{
-    margin-left: 15px;
-    margin-top: 1px;
+    margin-left: 20px;
+    margin-top: 20px;
 
 }
 .header-p2{
-    margin-left: 450px;
-    margin-top: 1px;
-    color:#aeb8ee;
+    margin-left: 490px;
+    margin-top: 20px;
+    color:#b65e17;
+    margin-right: 2px;
+    
 
+}
+.avatar2{
+    margin-left: 5px;
 }
 .tweet-footer{
     display: flex;
@@ -120,13 +127,15 @@ article:hover{
 display: flex;
 color:#7c8ad8;
 justify-content: left;
-margin-top: 20px;
+margin-top: 60px;
+margin-bottom: 15px;
 
 }
 
 .div-icon{
-    margin-top: 20px;
+    margin-top: 40px;
     margin-right:2em;
+    margin-bottom: 15px;
 }
 
 .fa-heart,
@@ -139,5 +148,23 @@ margin-top: 30px;
 
 .hovercss:hover {
    color: yellow;
+
+  }
+  .validation{
+     color: #D63301;
+     background-color: #dfd2cd;
+    border: 1px solid;
+	
+
+  }
+  .divError{
+    display:none;
+    font-size: medium;
+    text-align: center;
+    width: 400px;
+    margin-top:30px;
+   
+    
+    
 
   }

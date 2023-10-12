@@ -13,7 +13,11 @@ $(document).ready(function() {
                 //$("output").text("-", Txtareavalue);
                 return -Math.abs(Txtareavalue);
             }
+            if (txtlength > 0 && txtlength <= 140) {
 
+                $("output").css("color", "blue");
+                //$("output").text("-", Txtareavalue);
+            }
 
             return Txtareavalue;
 
