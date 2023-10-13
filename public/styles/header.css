@@ -1,11 +1,13 @@
 .header{
-    height: 430px;
-    width: 100%;
+    height:430px;
+    width: 50%;
     display:flex;
+    margin-left:50px;
+    margin-top: 150px;
     align-items: center;
     justify-content: center;
     flex-direction: column;   
-    background-color: #c7c290;
+    background-color:#dad062;
     background-image: url("../images/3px-tile.png");
 
    
@@ -16,16 +18,16 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    width: 60px; 
-    height: 60px;
-    border-radius: 50%;
-    margin-top: 250px;
+    width: 30px; 
+    height: 30px;
+    border-radius: 20%;
+    margin-top: 150px;
 
   
 }
 .name{
     display:flex;
-    margin-top: 60px;
+    margin-top: 70px;
     flex-direction:column;
     font-size:medium;
     color: rgb(86, 223, 223);

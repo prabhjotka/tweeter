@@ -35,7 +35,7 @@
       <h5>Write  a new tweet <i style="color: red;" class="fa-solid fa-angles-down icon"></i></h5>
       
     </nav>
-    <header class="header">
+    <header class="header" id="profilePic">
       <div class="avatar">
           <img src="/images/profile-hex.png"> 
       </div>
@@ -46,20 +46,23 @@
   </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <div class="validation divError" id="error"></div>
-        <form method="post" action='/tweets'  class="formcss">
+        <form method="post" action='/tweets'  class="formcss" id="tweetForm">
           <!--<label for="tweet-text">What are you humming about?</label>-->
           <textarea name="text" id="tweet-text" class="textareacss textarea1"
            placeholder="What are you humming about?"></textarea>
           
           <div class="divcss">
             <button type="submit" class="buttoncss">Tweet</button>
-            <output name="counter" class="counter outputcss" for="tweet-text">140</output>
+            <output name="counter" class="counter outputcss" for="tweet-text" id="counterValue">140</output>
           </div>
         </form>
       </section>
+      <div id="composeTweet" class="container">
+
+      </div>
     </main>
   </body>
 </html>

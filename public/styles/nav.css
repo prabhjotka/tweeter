@@ -30,3 +30,9 @@ nav {
     top: 20px;
     left: -100px;
   }
+  
+  @media screen and(min-width: 768px) and (max-width: 1024px) {
+    .nav{
+        background-image: url("../images/3px-tile.png");
+    }
+  }

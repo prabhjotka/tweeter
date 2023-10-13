@@ -6,29 +6,15 @@
 
 $(document).ready(function() {
 
-  $('form').on('submit', function(event) {
-    event.preventDefault();
-    $.ajax({
-      url: "http://localhost:8080/tweets",
-      method: 'GET',
-    })
-      .then(function(response) {
-        renderTweets(response);
-      })
-      .catch(function(error) {
-        console.log(error.message)
-      });
-
-  })
   //  Function to render tweet
   const renderTweets = function(tweets) {
 
     for (let tweet of tweets) {
       const tweetValue = createTweetElement(tweet);
-      $('main').append(tweetValue);
+      // $('#main').append(tweetValue);   Test pupose
+      $('#composeTweet').prepend(tweetValue);
     }
   }
-
   //  Function for prevent cross side scripting
 
   const escape = function(str) {
@@ -41,7 +27,7 @@ $(document).ready(function() {
 
   const createTweetElement = function(tweet) {
     const elements = $(`<article><header class="tweet-header">
-    <div class="avatar2"><img src=${tweet.user.avatars} name="img1"></div> </i><p class="header-p" name="name1">${tweet.user.name}</p>
+    <div class="avatar2"><img src=${tweet.user.avatars} id="img1"> </i><p class="header-p" name="name1">${tweet.user.name}</p></div>
        <p class="header-p2">${tweet.user.handle}</p>
      </header><textarea name="text2" id="article-text" class="textareacss textarea2">${escape(tweet.content.text)}</textarea>
     <footer class="tweet-footer">
@@ -50,7 +36,7 @@ $(document).ready(function() {
     <div class="div-icon">
       <i class="fa-solid fa-heart hovercss"></i>
       <i class="fa-solid fa-flag hovercss"></i>
-      <i class="fa-solid fa-arrows-rotate hovercss"></i></footer>`)
+      <i class="fa-solid fa-arrows-rotate hovercss"></i></footer></article>`)
     //const testElement=$(`<div>${escape(tweet.content.text)}</div>`);      Note:// Test the escape function with mentor on line 51,52
     //let $tweet = $(testElement);       
     let $tweet = $(elements);
@@ -61,6 +47,12 @@ $(document).ready(function() {
 
   $('#tweet-text').on('keyup', function(event) {
     const lengthofText = this.value.length;
+    if (lengthofText === 0) {
+      $('#error').empty();
+      $('#error').append(`<p>⚠️Please Enter a tweet</p>`)
+      $('#error').show()
+      return;
+    }
     if (lengthofText > 0 && lengthofText <= 140) {
       $('#error').hide();
       return;
@@ -69,11 +61,10 @@ $(document).ready(function() {
   });
 
   //jquery Event handler on submit
-  $('form').on('submit', function(event) {
+  $('#tweetForm').on('submit', function(event) {
     event.preventDefault();
     $('#error').hide();
     const lengthofText = this.text.value.length;
-
     if (lengthofText === 0) {
       $('#error').empty();
       $('#error').append(`<p>⚠️Please Enter a tweet</p>`)
@@ -97,7 +88,21 @@ $(document).ready(function() {
       .then(function(data, status) {
         console.log('status: ' + status + ', data: ' + data)
         // clear the form
-        $('#tweet-text').val(' ');
+        $('#tweet-text').val('');
+        $('#counterValue').text('140');
+
+        $.ajax({
+          url: "http://localhost:8080/tweets",
+          method: 'GET',
+        })
+          .then(function(response) {
+            renderTweets(response);
+          })
+          .catch(function(error) {
+            console.log(error.message)
+          });
+
+
       })
       .catch(error => {
         console.log('Error' + error.message);
