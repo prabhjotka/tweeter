@@ -30,8 +30,6 @@ $(document).ready(function() {
       <i class="fa-solid fa-heart hovercss"></i>
       <i class="fa-solid fa-flag hovercss"></i>
       <i class="fa-solid fa-arrows-rotate hovercss"></i></footer></article>`)
-    //const testElement=$(`<div>${escape(tweet.content.text)}</div>`);      Note:// Test the escape function with mentor on line 51,52
-    //let $tweet = $(testElement);       
     let $tweet = $(elements);
     return $tweet;
   }
