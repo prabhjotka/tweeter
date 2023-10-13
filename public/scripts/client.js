@@ -66,7 +66,7 @@ $(document).ready(function() {
     }
     if (lengthofText > 140) {
       $('#error').empty();
-      $('#error').append(`<p>⚠️Too Long .Max limit is 140 charcter<p>`)
+      $('#error').append(`<p>⚠️Too Long .Max limit is 140 character<p>`)
       $('#error').show()
       return;
     }
