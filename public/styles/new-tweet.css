@@ -103,11 +103,6 @@ article:hover{
     margin-left: 5px;
     margin-top: 20px;
 }
-/* .header-p{
-    margin-left: 20px;
-    margin-top: 20px;
-
-} */
 .header-p2{
 
     margin-top:20px;
@@ -169,19 +164,15 @@ margin-top: 30px;
    
   }
   
-  
   @media only screen  and (min-width: 1024px) { 
-
     body{
-       
+
         display:flex;
         flex-direction: row;
     }
         
     }
     
-
-   
    @media only screen  and (max-width: 1024px) { 
 
     body{
@@ -209,14 +200,11 @@ margin-top: 30px;
         justify-content: center;
         flex-direction: column;   
         background-color:#dad062;
-        background-image: url("../images/3px-tile.png");
-    
+        background-image: url("../images/3px-tile.png");  
        
     }
     main h2{
-        margin-top:0px;  
-    
-
+        margin-top:0px;   
    }
       
    }

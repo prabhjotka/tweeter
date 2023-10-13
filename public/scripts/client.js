@@ -1,22 +1,15 @@
-/*
- * Client-side JS logic goes here
- * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
- */
-
 $(document).ready(function() {
 
   //  Function to render tweet
-  const renderTweets = function(tweets) {
 
+  const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const tweetValue = createTweetElement(tweet);
-      // $('#main').append(tweetValue);   Test pupose
       $('#composeTweet').prepend(tweetValue);
     }
   }
-  //  Function for prevent cross side scripting
 
+  //  Function for prevent cross side scripting
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -43,7 +36,7 @@ $(document).ready(function() {
     return $tweet;
   }
 
-  //event handler on textarea
+  //Event handler on textarea
 
   $('#tweet-text').on('keyup', function(event) {
     const lengthofText = this.value.length;
@@ -75,11 +68,9 @@ $(document).ready(function() {
       $('#error').empty();
       $('#error').append(`<p>⚠️Too Long .Max limit is 140 charcter<p>`)
       $('#error').show()
-      // $("#error").slideUp();
       return;
     }
     const data = $(this).serialize();
-
     $.ajax({
       type: "POST",
       url: "http://localhost:8080/tweets",
@@ -87,8 +78,8 @@ $(document).ready(function() {
     })
       .then(function(data, status) {
         console.log('status: ' + status + ', data: ' + data)
-        // clear the form
-        $('#tweet-text').val('');
+
+        $('#tweet-text').val('');    // clear the form
         $('#counterValue').text('140');
 
         $.ajax({
@@ -100,8 +91,7 @@ $(document).ready(function() {
           })
           .catch(function(error) {
             console.log(error.message)
-          });
-
+          })
 
       })
       .catch(error => {
