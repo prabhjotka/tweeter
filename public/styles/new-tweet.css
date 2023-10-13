@@ -184,7 +184,7 @@ margin-top: 30px;
     
     body nav{
         z-index:1;
-        background-color: #dad062;
+        background-color:#efb906;
         background-image: url("../images/3px-tile.png");
     
     }
@@ -199,7 +199,7 @@ margin-top: 30px;
         align-items: center;
         justify-content: center;
         flex-direction: column;   
-        background-color:#dad062;
+        background-color:#efb906;
         background-image: url("../images/3px-tile.png");  
        
     }
