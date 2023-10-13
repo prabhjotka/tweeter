@@ -6,10 +6,10 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["compose tweet"](https://github.com/prabhjotka/tweeter/blob/master/docs/compose-tweet.png?raw=true)
-!["Get tweets"](https://github.com/prabhjotka/tweeter/blob/master/docs/getTweet.png?raw=true)
-!["checkForEmptytweet"](https://github.com/prabhjotka/tweeter/blob/master/docs/emptytweetchecking.png?raw=true)
-!["checkForMaxLengthtweet"](https://github.com/prabhjotka/tweeter/blob/master/docs/Maxlenthof%20tweet.png?raw=true)
+!["compose tweet"](https://github.com/prabhjotka/tweeter/blob/master/docs/composeTweet.png?raw=true)
+!["Get tweets"](https://github.com/prabhjotka/tweeter/blob/master/docs/GetTweets.png?raw=true)
+!["checkForEmptytweet"](https://github.com/prabhjotka/tweeter/blob/master/docs/CheckforEmptytweet.png?raw=true)
+!["checkForMaxLengthtweet"](https://github.com/prabhjotka/tweeter/blob/master/docs/checkForMaxlength.png?raw=true)
 
 ## Getting Started
 
