@@ -6,13 +6,13 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
-/*
- * Global layout stuff
- */
 
 body {
   color: #908f8b;
@@ -20,23 +20,19 @@ body {
   background-color: #e1d6c6;
   font-size: 24px;
   font-family: 'Bungee', sans-serif;
- 
+
 }
 
 
-.container{
-  width:90%;
+.container {
+  width: 90%;
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   margin-right: 30px;
-  align-items: center; 
-  display:flex;
+  align-items: center;
+  display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color:#e1d6c6;
-  margin-top:130px;
+  background-color: #e1d6c6;
+  margin-top: 70px;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */

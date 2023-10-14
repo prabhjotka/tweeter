@@ -69,7 +69,7 @@ $(document).ready(function() {
     const data = $(this).serialize();
     $.ajax({
       type: "POST",
-      url: "http://localhost:8080/tweets",
+      url: "/tweets",
       data: data
     })
       .then(function(data, status) {

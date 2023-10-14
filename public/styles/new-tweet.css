@@ -10,6 +10,7 @@
     justify-content: center
 }
 
+
 .textarea1 {
     width: 150%;
     margin-top: 40px;
@@ -32,16 +33,14 @@
 }
 
 #article-text {
-    margin-top: 100px;
+    margin-top: 60px;
     display: flex;
-    height: 20px;
     margin-left: 0px;
     text-wrap: wrap;
 
 }
 
 .p_format {
-    inline-size: 520px;
     word-break: break-all;
     overflow-wrap: break-word;
 
@@ -72,11 +71,10 @@
 }
 
 main h2 {
-    margin-top: 10px;
+    margin-top: 60px;
     font-size: large;
-    text-align: center;
     color: rgb(14, 112, 169);
-    margin-left: 80px;
+    margin-left: 20px;
 }
 
 .outputcss {
@@ -151,15 +149,13 @@ article:hover {
     display: flex;
     color: #7c8ad8;
     justify-content: left;
-    margin-top: 60px;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 
 }
 
 .div-icon {
-    margin-top: 40px;
     margin-right: 2em;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
 .fa-heart,
@@ -231,8 +227,9 @@ article:hover {
 
     }
 
-    main h2 {
-        margin-top: 0px;
+
+    body.container {
+        margin-top: 1px;
     }
 
 }

@@ -1,35 +1,36 @@
-.header{
-    height:430px;
+.header {
+    height: 430px;
     width: 50%;
-    display:flex;
-    margin-left:50px;
+    display: flex;
+    margin-left: 50px;
     margin-top: 150px;
     align-items: center;
     justify-content: center;
-    flex-direction: column;   
-    background-color:#efb906;
+    flex-direction: column;
+    background-color: #efb906;
     background-image: url("../images/3px-tile.png");
 
-   
+
 }
 
 
-.avatar{
-    display:flex;
+.avatar {
+    display: flex;
     align-items: center;
     justify-content: center;
-    width: 30px; 
+    width: 30px;
     height: 30px;
     border-radius: 20%;
     margin-top: 150px;
 
-  
+
 }
-.name{
-    display:flex;
+
+.name {
+    display: flex;
     margin-top: 70px;
-    flex-direction:column;
-    font-size:medium;
+    flex-direction: column;
+    font-size: medium;
     color: rgb(86, 223, 223);
-   
+
 }

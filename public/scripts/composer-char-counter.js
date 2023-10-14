@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    // --- our code goes here ---
+    // jquery handler for  counter display number of charcaters.
     $('textarea').on('input', function() {
         const textValue = this.value.trim();
         const txtlength = textValue.length;
@@ -14,8 +14,6 @@ $(document).ready(function() {
             if (txtlength > 0 && txtlength <= 140) {
 
                 $("output").removeClass("red_color");
-
-
             }
 
             return Txtareavalue;
