@@ -1,6 +1,5 @@
 $(document).ready(function() {
 
-
   const loadTweets = function() {
     $.ajax({
       url: "/tweets",
