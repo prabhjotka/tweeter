@@ -1,6 +1,18 @@
 $(document).ready(function() {
 
-  //  Function to render tweet
+
+  const loadTweets = function() {
+    $.ajax({
+      url: "/tweets",
+      method: 'GET',
+    })
+      .then(function(response) {
+        renderTweets(response);
+      })
+      .catch(function(error) {
+        console.log(error.message)
+      })
+  }
 
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
@@ -22,8 +34,9 @@ $(document).ready(function() {
     const elements = $(`<article><header class="tweet-header">
     <div class="avatar2"><img src=${tweet.user.avatars} id="img1"> </i><p class="header-p" name="name1">${tweet.user.name}</p></div>
        <p class="header-p2">${tweet.user.handle}</p>
-     </header><textarea name="text2" id="article-text" class="textareacss textarea2">${escape(tweet.content.text)}</textarea>
-    <footer class="tweet-footer">
+     </header><div class="p_format textareacss"><p name="text2" id="article-text">${escape(tweet.content.text)}</p></div>
+     <div class="border"></div>
+     <footer class="tweet-footer">
     <p class="footer-text" name="createdAt">${timeago.format(tweet.created_at, 'en_US')}</p>
     </p>
     <div class="div-icon">
@@ -33,29 +46,14 @@ $(document).ready(function() {
     let $tweet = $(elements);
     return $tweet;
   }
+  loadTweets();
 
-  //Event handler on textarea
-
-  $('#tweet-text').on('keyup', function(event) {
-    const lengthofText = this.value.length;
-    if (lengthofText === 0) {
-      $('#error').empty();
-      $('#error').append(`<p>⚠️Please Enter a tweet</p>`)
-      $('#error').show()
-      return;
-    }
-    if (lengthofText > 0 && lengthofText <= 140) {
-      $('#error').hide();
-      return;
-    }
-
-  });
-
-  //jquery Event handler on submit
+  // Ajax post request on submit handler  
   $('#tweetForm').on('submit', function(event) {
     event.preventDefault();
     $('#error').hide();
-    const lengthofText = this.text.value.length;
+    const textValue = this.text.value.trim();
+    const lengthofText = textValue.length;
     if (lengthofText === 0) {
       $('#error').empty();
       $('#error').append(`<p>⚠️Please Enter a tweet</p>`)
@@ -79,22 +77,27 @@ $(document).ready(function() {
 
         $('#tweet-text').val('');    // clear the form
         $('#counterValue').text('140');
-
-        $.ajax({
-          url: "http://localhost:8080/tweets",
-          method: 'GET',
-        })
-          .then(function(response) {
-            renderTweets(response);
-          })
-          .catch(function(error) {
-            console.log(error.message)
-          })
-
+        loadTweets();
       })
+
       .catch(error => {
         console.log('Error' + error.message);
       });
+
+  });
+
+  $('#tweet-text').on('input', function(event) {
+    const lengthofText = this.value.length;
+    if (lengthofText === 0) {
+      $('#error').empty();
+      $('#error').append(`<p>⚠️Please Enter a tweet</p>`)
+      $('#error').show()
+      return;
+    }
+    if (lengthofText > 0 && lengthofText <= 140) {
+      $('#error').hide();
+      return;
+    }
 
   });
 

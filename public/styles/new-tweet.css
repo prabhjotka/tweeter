@@ -1,53 +1,68 @@
-
-.new-tweet{
-display:flex;
-flex-direction: column;
+.new-tweet {
+    display: flex;
+    flex-direction: column;
 
 }
-.formcss{
-    display:flex;
-    flex-direction:column;
+
+.formcss {
+    display: flex;
+    flex-direction: column;
     justify-content: center
-   
 }
 
-.textarea1{
+.textarea1 {
     width: 150%;
-   margin-top:40px;
+    margin-top: 40px;
     height: 90px;
-  padding: 12px 20px;
- margin-right: 200px;
- text-align: left;
+    padding: 12px 20px;
+    margin-right: 200px;
+    border: none;
+    border-bottom: 1px solid;
+    text-align: left;
 
 }
-.textareacss{
-    display:flex;
+
+.textareacss {
+    display: flex;
     width: 100%;
     background-color: #e1d6c6;
-    border:none;
     font-size: medium;
-    justify-content: center;
+    justify-content: left;
+
+}
+
+#article-text {
+    margin-top: 100px;
+    display: flex;
+    height: 20px;
+    margin-left: 0px;
+    text-wrap: wrap;
+
+}
+
+.p_format {
+    inline-size: 520px;
+    word-break: break-all;
+    overflow-wrap: break-word;
+
+}
+
+.border {
     border-bottom: 1px solid;
-   
-}
-.textarea2{
-    margin-top: 80px;
-    display:flex;
-   height:40px
-    
+    color: rgb(15, 12, 12);
 }
 
-
-.divcss{
-    display:flex;
-    flex-direction:row;
+.divcss {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     margin-top: 20px;
 
 }
-.buttoncss{
-    display:flex;
-    justify-content:left;
+
+.buttoncss {
+    display: flex;
+    justify-content: left;
     background-color: blue;
     border-width: 5px;
     border-color: blueviolet;
@@ -56,20 +71,27 @@ flex-direction: column;
 
 }
 
- main h2{
- margin-top:10px;   
- font-size:large;
+main h2 {
+    margin-top: 10px;
+    font-size: large;
     text-align: center;
-    color:rgb(14, 112, 169);
+    color: rgb(14, 112, 169);
     margin-left: 80px;
 }
-.outputcss{
-    display:flex;
+
+.outputcss {
+    display: flex;
     justify-content: flex-end;
     text-align: right;
-    color:blue;
-    margin-right:10px;
+    color: blue;
+    margin-right: 10px;
 }
+
+.red_color {
+    color: red;
+
+}
+
 article {
     display: flex;
     box-sizing: border-box;
@@ -83,130 +105,134 @@ article {
     padding-top: 10px;
 
 }
-article:hover{
+
+article:hover {
     box-shadow: 10px 5px 5px rgb(83, 99, 252);
 }
 
-.tweet-header{
+.tweet-header {
     display: flex;
-   flex-flow: row;
-   font-size: medium;
+    flex-flow: row;
+    font-size: medium;
     color: rgba(105, 105, 165, 0.665);
     margin-left: 5px;
     justify-content: space-between;
     margin-right: 4px;
 
 }
-.avatar2{
-    display:flex;
+
+.avatar2 {
+    display: flex;
     flex-direction: row;
     margin-left: 5px;
     margin-top: 20px;
 }
-.header-p2{
 
-    margin-top:20px;
-    color:#b65e17;
-    margin-right:1px;  
+.header-p2 {
+
+    margin-top: 20px;
+    color: #b65e17;
+    margin-right: 1px;
 
 }
-.tweet-footer{
+
+.tweet-footer {
     display: flex;
-   
+
     flex-direction: row;
     font-size: medium;
     justify-content: space-between;
     resize: none;
-    
-    
-}
 
-.footer-text{
-display: flex;
-color:#7c8ad8;
-justify-content: left;
-margin-top: 60px;
-margin-bottom: 15px;
 
 }
 
-.div-icon{
+.footer-text {
+    display: flex;
+    color: #7c8ad8;
+    justify-content: left;
+    margin-top: 60px;
+    margin-bottom: 15px;
+
+}
+
+.div-icon {
     margin-top: 40px;
-    margin-right:2em;
+    margin-right: 2em;
     margin-bottom: 15px;
 }
 
 .fa-heart,
 .fa-flag,
 .fa-arrows-rotate {
-margin-right:5px;
-margin-top: 30px;
+    margin-right: 5px;
+    margin-top: 30px;
 }
 
 
 .hovercss:hover {
-   color: yellow;
+    color: yellow;
 
-  }
-  .validation{
-     color: #D63301;
-     background-color: #dfd2cd;
+}
+
+.validation {
+    color: #D63301;
+    background-color: #dfd2cd;
     border: 1px solid;
-	
 
-  }
-  .divError{
-    display:none;
+
+}
+
+.divError {
+    display: none;
     font-size: medium;
     text-align: center;
     width: 400px;
-    margin-top:30px;
-   
-  }
-  
-  @media only screen  and (min-width: 1024px) { 
-    body{
+    margin-top: 30px;
 
-        display:flex;
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+
+        display: flex;
         flex-direction: row;
     }
-        
-    }
-    
-   @media only screen  and (max-width: 1024px) { 
 
-    body{
-       
-        display:flex;
-        flex-direction:column;
+}
+
+@media only screen and (max-width: 1024px) {
+
+    body {
+
+        display: flex;
+        flex-direction: column;
 
     }
-    
-    body nav{
-        z-index:1;
-        background-color:#efb906;
-        background-image: url("../images/3px-tile.png");
-    
+
+    body nav {
+        z-index: 1;
+        background-color: transparent;
+
     }
-    body .header
-    {
-        z-index:2;
-        height:300px;
-        width:100%;
-        display:flex;
-        margin-left:0px;
-        margin-top:0px;
+
+    body .header {
+        z-index: 2;
+        height: 300px;
+        width: 100%;
+        display: flex;
+        margin-left: 0px;
+        margin-top: 0px;
         align-items: center;
         justify-content: center;
-        flex-direction: column;   
-        background-color:#efb906;
-        background-image: url("../images/3px-tile.png");  
-       
-    }
-    main h2{
-        margin-top:0px;   
-   }
-      
-   }
+        flex-direction: column;
+        background-color: #efb906;
+        background-image: url("../images/3px-tile.png");
 
-   
+    }
+
+    main h2 {
+        margin-top: 0px;
+    }
+
+}

@@ -1,22 +1,21 @@
 $(document).ready(function() {
     // --- our code goes here ---
-    $('textarea').on('keyup', function() {
-        let ouputText = parseInt($("output[name='counter']").html());
-
-        const txtlength = this.value.length;
+    $('textarea').on('input', function() {
+        const textValue = this.value.trim();
+        const txtlength = textValue.length;
 
         $("output").text(function(n) {
             const Txtareavalue = 140 - txtlength;
             if (txtlength > 140) {
 
-                $("output").css("color", "red");
-                //$("output").text("-", Txtareavalue);
+                $("output").addClass("red_color");
                 return -Math.abs(Txtareavalue);
             }
             if (txtlength > 0 && txtlength <= 140) {
 
-                $("output").css("color", "blue");
-                //$("output").text("-", Txtareavalue);
+                $("output").removeClass("red_color");
+
+
             }
 
             return Txtareavalue;
@@ -25,6 +24,6 @@ $(document).ready(function() {
 
     });
 
-    
+
 });
 
