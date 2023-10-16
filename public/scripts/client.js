@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+
   const loadTweets = function() {
     $.ajax({
       url: "/tweets",
@@ -12,12 +13,14 @@ $(document).ready(function() {
         console.log(error.message)
       })
   }
-
+  loadTweets();
   const renderTweets = function(tweets) {
     for (let tweet of tweets) {
       const tweetValue = createTweetElement(tweet);
       $('#composeTweet').prepend(tweetValue);
+
     }
+
   }
 
   //  Function for prevent cross side scripting
@@ -45,7 +48,7 @@ $(document).ready(function() {
     let $tweet = $(elements);
     return $tweet;
   }
-  loadTweets();
+
 
   // Ajax post request on submit handler  
   $('#tweetForm').on('submit', function(event) {
@@ -72,10 +75,10 @@ $(document).ready(function() {
       data: data
     })
       .then(function(data, status) {
-        console.log('status: ' + status + ', data: ' + data)
-
+        console.log('status: ' + status + ', data: ' + data);
         $('#tweet-text').val('');    // clear the form
         $('#counterValue').text('140');
+        $('#composeTweet').empty();
         loadTweets();
       })
 
