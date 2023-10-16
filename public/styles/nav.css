@@ -17,6 +17,7 @@ h5 {
   display: flex;
   align-items: center;
   text-align: justify;
+  padding-bottom: 30px;
 }
 
 span {
@@ -24,6 +25,7 @@ span {
   align-items: center;
   text-align: justify;
   font-family: Bungee;
+  padding-bottom: 30px;
 }
 
 .icon {
@@ -31,4 +33,3 @@ span {
   top: 20px;
   left: -100px;
 }
-
